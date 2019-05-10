@@ -20,7 +20,7 @@
 []migrations
     -projects
     -actions
-[]knex file
+[x]knex file
 - seeds files 
 
 ##MIGRATIONS (way to recreate your database to particular point in time)
