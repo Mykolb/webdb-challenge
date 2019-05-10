@@ -13,9 +13,9 @@
   },
 
 ## ORGANIZATION
-[] server file 
-[] index file 
-- routes folder
+[x] server file 
+[x] index file 
+[x] routes folder
     - routes files
 []migrations
     -projects
