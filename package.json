@@ -4,8 +4,7 @@
   "description": "sprint challenge",
   "main": "index.js",
   "scripts": {
-    "server": "nodemon index.js",
-    "start": "node index.js"
+    "start": "nodemon index.js"
   },
   "repository": "https://github.com/Mykolb/webdb-challenge.git",
   "author": "Mykol-Benning",

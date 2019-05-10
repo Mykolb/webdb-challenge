@@ -19,7 +19,6 @@ const db = knex(knexConfig);
 router.get('/', (req, res) => {
     db('projects') //has to be the same name as the table name 
     .then(projects => {
-        console.log('projects')
         res.status(200).json(projects)
     })
     .catch(err => {
@@ -28,6 +27,7 @@ router.get('/', (req, res) => {
 })
 
 //add a project
+//working
 router.post('/', (req, res) => {
   db('projects')
   .insert(req.body, 'name')
@@ -43,21 +43,22 @@ router.post('/', (req, res) => {
 
  //Get projects by id and return actions with it 
 router.get('/:id', (req, res) => {
+  const { id } = req.params;
   db('projects')
   .where({id: req.params.id})
   .first()
   .then(projects => {
     db('actions')
     .where({ project_id: id})
-    console.log(id)
     .then(actions => {
-      (projects.actions = actions);
-       return res.status(200).json(projects);
+      projects.actions = actions;
+        res.status(200).json(projects);
     })
   
      })
     .catch(err => {
-      res.status(500).json({ error: err, message: 'There was an error returning the projects'})
+      res.status(500).json({ error: err.message})
+      //id is not defined 
  })
 })
 
