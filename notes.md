@@ -17,7 +17,7 @@
 [x] index file 
 [x] routes folder
     - routes files
-[]migrations
+[x]migrations
     -projects
     -actions
 [x]knex file

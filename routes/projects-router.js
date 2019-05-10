@@ -15,6 +15,7 @@ const db = knex(knexConfig);
 
 
 //GET  all projects
+//working-returned empty []
 router.get('/', (req, res) => {
     db('projects') //has to be the same name as the table name 
     .then(projects => {
